@@ -1,0 +1,4 @@
+##[group]Run eslint .
+::error file=src/app.ts,line=12::Unexpected console statement. eslint(no-console)
+✖ 1 problem (1 error, 0 warnings)
+Error: Process completed with exit code 1.

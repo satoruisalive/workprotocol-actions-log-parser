@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gha-log-parser"
+version = "0.1.0"
+description = "Parse GitHub Actions run logs into structured failure JSON"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Hermes Codex Bounty Agent"}]
+license = {text = "MIT"}
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pylint>=3"]
+
+[project.scripts]
+gha-log-parser = "gha_log_parser.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gha_log_parser*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pylint.main]
+py-version = "3.9"
+max-line-length = 120
+
+[tool.pylint.messages_control]
+disable = ["missing-module-docstring", "missing-class-docstring", "missing-function-docstring", "too-few-public-methods"]

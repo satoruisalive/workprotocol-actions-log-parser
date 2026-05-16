@@ -1,0 +1,4 @@
+##[group]Run npm run build
+npm run build
+src/index.ts(7,18): error TS2322: Type 'string' is not assignable to type 'number'.
+Error: Process completed with exit code 2.
